@@ -1,12 +1,15 @@
 'use client'
-export default (props)=> {
+export default ({params, searchParams}: {
+    params: {file: string},
+    searchParams: {hi: string, ho: string}
+})=> {
 
-    console.log("Props: ", props);
+    console.log("Props: ", params, searchParams);
 
     return (
         <div>
-            file Page, {props.params.file} <br />
-            search params: {props.searchParams.hi}
+            file Page, {params.file} <br />
+            search params: {searchParams.ho}
         </div>
     )
 }
