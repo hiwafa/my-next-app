@@ -18,6 +18,7 @@ export default function RootLayout({
       <body >
         <nav className="flex space-x-3">
           <Link href="/">Home</Link>
+          <Link href="/users">Users</Link>
           <Link href="/about">About</Link>
           <Link href="/files">Files</Link>
           <Link href={{
