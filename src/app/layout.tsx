@@ -20,6 +20,13 @@ export default function RootLayout({
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <Link href="/files">Files</Link>
+          <Link href={{
+            pathname: "/files/file1",
+            query: {
+              ho: "Sample Specific file",
+              message: "I am fine"
+            }
+          }}>Specific File</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/blogs">Blogs</Link>
         </nav>
