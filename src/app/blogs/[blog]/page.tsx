@@ -6,9 +6,22 @@ type Props = {
     }
 }
 
-export const generateMetadata = ({params}: Props): Metadata => {
+// export const generateMetadata = ({params}: Props): Metadata => {
+//     return {
+//         title: `Blog-${params.blog}`
+//     }
+// }
+
+export const generateMetadata = async ({params}: Props) : Promise<Metadata> => {
+
+    const title = await new Promise((resolve, reject)=> {
+        setTimeout(()=> {
+            resolve(`Blog ${params.blog}`);
+        }, 4000)
+    })
+
     return {
-        title: `Blog-${params.blog}`
+        title
     }
 }
 
