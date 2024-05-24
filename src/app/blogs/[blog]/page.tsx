@@ -1,5 +1,22 @@
+import { Metadata } from "next"
 
-export default ({params})=> {
+type Props = {
+    params: {
+        blog: string
+    }
+}
+
+export const generateMetadata = ({params}: Props): Metadata => {
+    return {
+        title: `Blog-${params.blog}`
+    }
+}
+
+export default ({params}: {
+    params: {
+        blog: string
+    }
+})=> {
 
 
     return (
