@@ -1,15 +1,21 @@
+"use client"
 import Link from "next/link"
 import type {Metadata} from "next"
+import {usePathname} from "next/navigation"
 
-export const metadata: Metadata = {
-    title: "Users Page",
-    description: "This is the user page"
-}
+// we can not use meta data with USE CLIENT
+// export const metadata: Metadata = {
+//     title: "Users Page",
+//     description: "This is the user page"
+// }
 
 
 export default function UsersLayout({children}: Readonly<{
     children: React.ReactNode
 }>){
+
+    const pathname = usePathname();
+    console.log("Paths: ", pathname);
 
     return (
         <div>
