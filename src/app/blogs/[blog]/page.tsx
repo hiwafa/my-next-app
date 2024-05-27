@@ -16,12 +16,17 @@ export const generateMetadata = async ({params}: Props) : Promise<Metadata> => {
 
     const title = await new Promise((resolve, reject)=> {
         setTimeout(()=> {
-            resolve(`Blog ${params.blog}`);
+            resolve(`${params.blog}`);
         }, 4000)
     })
 
     return {
-        title
+        title: {
+            absolute: "",
+            default: "Deault " + title,
+            template: `%s | ${title}`
+        },
+        description: "page description for blog"
     }
 }
 
