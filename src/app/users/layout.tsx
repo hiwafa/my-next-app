@@ -17,12 +17,13 @@ export default function UsersLayout({children}: Readonly<{
     const pathname = usePathname();
     console.log("Paths: ", pathname);
 
+
     return (
         <div>
             <nav className="flex space-x-3">
-            <Link href="/users/user1">First User</Link>
-            <Link href="/users/user2">Second User</Link>
-            <Link href="/users/user3">Third User</Link>
+            <Link href="/users/user1" className={pathname.startsWith('/users/user1') ? 'font-bold text-blue-500' : ''}>First User</Link>
+            <Link href="/users/user2" className={pathname.startsWith('/users/user2') ? 'font-bold text-blue-500' : ''}>Second User</Link>
+            <Link href="/users/user3" className={pathname.startsWith('/users/user3') ? 'font-bold text-blue-500' : ''}>Third User</Link>
             </nav>
             {children}
         </div>
