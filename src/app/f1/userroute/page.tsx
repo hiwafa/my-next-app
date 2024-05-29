@@ -6,6 +6,8 @@ export default function RoutingPage(){
         <div>
             <Link href="/f1/userimage" >Display User Image</Link>
             <br />
+            <Link href="/about" >Got To About Page</Link>
+            <br />
             Routing Page
         </div>
     )
